@@ -1,0 +1,76 @@
+Current_day_by_Technician.xlsx column details:
+
+RequestID	
+Requester	
+Issue Description	
+Subject	
+Resolved Time	
+Technician	
+Resolution	
+Created By
+Request Mode
+On Behalf Of User
+
+
+Service_Desk_Incident_Management_Ticket_Audits.xlsx column details:
+
+Technician	
+Request ID	
+Subject	
+Completed Date	
+Manager	
+Has the "Requester Name" been updated to reflect who the ticket is for? (Section 2b)	
+Has the ticket "Subject" been updated to leverage the naming convention "SERVICE - Brief Description of Issue or Request"? (Section 5a ix)	
+Did the technician search for and note a relevant Solution article, if one exists? (Section 8b)	
+Did the technician provide clear and detailed notes, documenting all steps taking during troubleshooting? (Section 9)	
+Are the resolutions notes clearly and fully documented, including the exact steps taken for resolution? (Section 10a)	
+If no solution article existed, did the technician submit a new solution article request? (Section 10e)	
+Notes	
+
+
+Need to update Service_Desk_Incident_Management_Ticket_Audits.xlsx column on below condition:
+
+Technician detail should pick from Current_day_by_Technician.xlsx Technician column
+
+Request ID column should pick from Current_day_by_Technician.xlsx RequestID column  
+
+Subject	column should pick from Current_day_by_Technician.xlsx Subject column 
+Completed Date	column should pick from Current_day_by_Technician.xlsx 'Resolved Time' column 
+Manager - "Saravanan"
+
+Has the "Requester Name" been updated to reflect who the ticket is for? (Section 2b)- It need to check Requester column value  equal to On behalf of name column value if matches then Yes else Manual Audit required also need to check the Request mode if value is not in phone and service portal if then ignore the validation and pass it as yes also if On behalf of name is not assigned then also pass as Yes if some value is there then validate 
+
+	
+Has the ticket "Subject" been updated to leverage the naming convention "SERVICE - Brief Description of Issue or Request"? (Section 5a ix)- 
+here we need to take the 'issue description' column from the Current_day_by_Technician excel and create subject header as like below format and need to compare with subject description if 70% matches then 'yes' else 'Manual audit required' 
+
+correct format like one word with capital letter followed by - then subject description
+'CLOCK - Adjust and Add EST clock'
+'CASEWARE - Unable to access the file'
+'CASEWARE - Server licensing issue.'
+'PASSWORD - DS1 account'
+'SPAM - Email from aol.com'
+'PPC - Single audit missing template update'
+'QUICKBOOKS - Unable to map R drive'
+
+Incorrect format
+
+'Password - No access to Work'
+'Email may be fake'
+'CCH Axcess - Not able to update'
+'Security - Email with "Remittance" Subject'
+'Immediate Action Required: Return of Berdon HP Laptops'
+	
+Did the technician search for and note a relevant Solution article, if one exists? (Section 8b)	- Here we need to check the Resolution column  of Current_day_by_Technician excel data if the word 'KBA' or 'Solution article' or Auto resolved then we need to fill "No Audit" else "Normal Audit reuired"
+then update KBA is missing otherwise no need to put anything in Note column
+
+Did the technician provide clear and detailed notes, documenting all steps taking during troubleshooting? (Section 9)-Here we need to check the Resolution column  of Current_day_by_Technician excel data if 'KBA' or 'Auto resolved' or user confirmation found or available then we need to fill "True" else "False"
+
+Are the resolutions notes clearly and fully documented, including the exact steps taken for resolution? (Section 10a)- Here we need to check the Resolution column  of Current_day_by_Technician excel data if the word 'KBA' or 'Solution article' or Auto resolved and user confirmation must needed then we need to fill "No Audit" else "Normal Audit reuired"
+
+If no solution article existed, did the technician submit a new solution article request? (Section 10e)	- Here we need to check the resolution column of Current_day_by_Technician excel that the word 'new KBA' or 'new solution article'  exists then 'yes' else 'No'  then New KBA or New solution missing otherwise no need to put anything in Note column
+
+
+Notes- in notes column we need to fill the why it fail like Audit required or No is coming what is the reason ?
+	
+																				
