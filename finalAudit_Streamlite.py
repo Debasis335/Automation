@@ -29,7 +29,8 @@ semantic_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 current_day_path = st.file_uploader("Upload 'Current_day_by_Technician.xlsx'", type=["xlsx"])
 # audit_path = st.file_uploader("Upload 'Service_Desk_Incident_Management_Ticket_Audits.xlsx'", type=["xlsx"])
-audit_path = r'D:\Automation\doc\doc1\Service_Desk_Incident_Management_Ticket_Audits.xlsx'
+# audit_path = r'D:\Automation\doc\doc1\Service_Desk_Incident_Management_Ticket_Audits.xlsx'
+audit_path = os.path.join('doc', 'doc1', 'Service_Desk_Incident_Management_Ticket_Audits.xlsx')
 
 # Load the data from the Excel files
 if current_day_path is not None and audit_path is not None:
